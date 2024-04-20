@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+  <script src="./js/Rotation.js"></script>
+
+</head>
+
+<body>
+  <a-scene>
+    <a-a-assets>
+      <a-asset-item id="island" src="assets/island/scene.gltf"></a-asset-item>
+
+      <a-asset-item id="treasure" src="assets/treasure/model.gltf"></a-asset-item>
+      <a-asset-item id="fish" src="assets/fish/scene.gltf"></a-asset-item>
+      <a-asset-item id="turtle" src="assets/turtle/scene.gltf"></a-asset-item>
+      <a-asset-item id="scuba_diver" src="assets/Scuba-Diver/scene.gltf"></a-asset-item>
+    </a-a-assets>
+
+    <a-sky geometry="primitive: sphere;"
+      material="shader: gradient; bottomColor: #003366; topColor:0 102 204;offset: 0.0001;" radius="100"
+      theta-length="180" side="double"
+      animation="property: rotation; to: 0 300 0; easing:linear; loop: true; dur: 500000">
+
+      <a-entity gltf-model="#island" scale="1 1 1" position="0 -15 -40"></a-entity>
+
+      
+      <a-entity gltf-model="#turtle" scale="0.025 0.025 0.025" position="0 -10 -25" rotation="0 90 0"></a-entity>
+
+      <a-entity gltf-model="#fish" scale="0.4 0.4 0.4" position="-20 -10 0" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#fish" scale="0.4 0.4 0.4" position="0 -10 10" rotation="0 45 0"></a-entity>
+      <a-entity gltf-model="#fish" scale="0.4 0.4 0.4" position="30 -10 -5" rotation="0 90 0"></a-entity>
+    </a-sky>
+
+    <a-entity gltf-model="#scuba_diver" s<a-entity gltf-model="#treasure" scale="15 15 15" position="0 -30 -40" rotation="0 90 0"></a-entity>
+    <a-entity gltf-model="#treasure" scale="15 15 15" position="10 -30 -40" rotation="0 90 0"></a-entity>
+    <a-entity gltf-model="#treasure" scale="15 15 15" position="-15 -30 -40" rotation="0 90 0"></a-entity>
+cale="0.2 0.2 0.2" position="5 5 5" rotation="0 180 0"
+    diver_movement>
+      <a-sphere id="bubble1" position="7.9829 20.97737 -19" radius="1" color="#b2ebf2"
+        animation="property: position; to: 52.9829 275 -49.38121;easing:linear; loop: true; dur: 2000"></a-sphere>
+    </a-entity>
+
+    <a-cylinder color="#00009e" radius="100" opacity="0.4"></a-cylinder>
+
+    <a-entity camera="active: true" look-controls position="0 10 35"></a-entity>
+  </a-scene>
+</body>
+
+</html>
